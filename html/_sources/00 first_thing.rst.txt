@@ -1,0 +1,41 @@
+First things first!
+-------------------
+
+Start creating a databank (database).
+
+EEG Weaver Report (EWR) opens in  "Edit Report and create PDF" (Tab1).
+
+.. image:: 01tab.png
+
+Go to "Report List" (Tab3) and click in "Data Bases".
+
+.. image:: 02tab.png
+
+You can create your databank in any folder. Try using a short name. Ex: focal_epilep.
+
+You can also import a previously created dababank from any folder to the list.
+
+.. image:: 03tab.png
+
+Each time you create a databank (which can hold many reports) it comes to this list.
+
+.. image:: 04tab.png
+
+If the list have many databanks (DataBases) you can find Database Name here.
+
+.. image:: 05tab.png
+
+After databank creation close the window.
+
+.. image:: 06tab.png
+
+Choose databank created in dropdown menu. Reports will be added to selected databank.
+
+.. image:: 07tab.png
+
+
+
+You are right to go! Open Tab1 again.
+
+Remember to backup databanks using windows tools.
+=================================================

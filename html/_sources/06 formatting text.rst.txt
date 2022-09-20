@@ -1,0 +1,49 @@
+Formatting Report Text
+----------------------
+
+You can format text if you need to. It is not necessary.
+
+EEG Weaver Report (EWR) is not a " microsoft word editor" or "libre office editor", so there are some characters to help formatting.
+
+The paragraph Text can contain XML-like markup including the tags:
+
+<b> ... </b> - bold
+
+<i> ... </i> - italics
+
+<u> ... </u> - underline
+
+<super> ... </super> - superscript
+
+<sub> ... </sub> - subscript
+
+
+The whole text may be surrounded by <para> </para> tags
+
+the intraparagraph tags:
+
+<b> or <strong> - bold
+
+<i> - italicize
+
+<u> - underline
+
+<a href> - Adding a link
+
+<a name> - Adding an anchor
+
+<strike> - Strike-through
+
+<br/> - line break
+
+
+
+.. image:: 01tab6.png
+
+
+The  pdf is formatted as:
+
+.. image:: 2tab6.png
+
+.. image:: 3tab6.png
+

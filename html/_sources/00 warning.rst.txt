@@ -1,0 +1,8 @@
+Remember First of All.
+----------------------
+
+If a pdf is opened in another application
+
+close it before trying to save another pdf with same name.
+
+Otherwise EEG Weaver Report will fail to create it.

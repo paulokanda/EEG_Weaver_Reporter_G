@@ -1,0 +1,21 @@
+Edit previously created report
+------------------------------
+
+On Tab1, to save report first time click on "Save Button".
+
+.. image:: 11tab1.png 
+
+If you keep clicking on "Save Button" new copies (of the displayed report in Tab1) 
+are created. 
+
+To update created report without creating a new one
+====================================================
+
+Edit field reports as needed
+Change "Patient" field to personalize report and
+click on "Save Changes Before Closing".
+
+.. image:: 21tab1.png
+
+It updates report in "Report List" (Tab3).
+

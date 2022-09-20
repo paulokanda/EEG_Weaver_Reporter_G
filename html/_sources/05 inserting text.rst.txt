@@ -1,0 +1,32 @@
+Inserting text to body Report
+-----------------------------
+
+Inserting text to body Report .
+
+In Tab3 select a created report in list.
+
+In our example "header and footer template"
+
+.. image:: 03tab3.png
+
+Go to Tab1, rename "Patient" to "First Report".
+
+.. image:: 20tab1.png
+
+Just insert your report:
+
+.. image:: 21tab1.png
+
+Click on "Save Changes Before closing".
+
+.. image:: 12tab1.png
+
+Click on "Create and Save Report to PDF".
+
+.. image:: 15tab1.png
+
+The result is shown bellow:
+
+.. image:: 22atab1.png
+
+.. image:: 22btab1.png

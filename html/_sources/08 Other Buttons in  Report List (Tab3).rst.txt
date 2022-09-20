@@ -1,0 +1,28 @@
+Other Buttons in Report List (Tab3)
+-----------------------------------
+
+Some more buttons and commands:
+
+
+.. image:: 04tab3.png
+
+
+1. "Duplicate Report" - select a report in list and click here.
+
+2. "Delete Report Selected" - can't be undone.
+
+3. "Delete Many" - first "Ctrl and left mouse button" to select many reports and cclick to del, it can't be restored.
+
+4. "Show all reports" - after using "Search Patient's name" it reshow all.
+
+5. "Delete Logo" - remove header image.
+
+6. "Delete signature" - remove signature image in footer.
+
+7. "Delete All Reports" - Warning!!! Erases this database reports.
+
+8. "Arrow up" - reorder ascending.
+
+9. "Arrow down" - reorder descending.
+
+10. Databases - opens new window as explained.

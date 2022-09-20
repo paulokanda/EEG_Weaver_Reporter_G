@@ -1,0 +1,5 @@
+Configuration
+-------------
+
+Some more buttons and commands for configuration tweaking.
+Try it and create pdfs to check results.

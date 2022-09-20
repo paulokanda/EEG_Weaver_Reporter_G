@@ -1,0 +1,38 @@
+.. EEG Weaver Reporter documentation master file, created by
+   sphinx-quickstart on Sun Aug 21 16:21:53 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to EEG Weaver Reporter's documentation!
+===============================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+EEG Weaver Reporter (EWR) is a windows application (app) to be used by neurophysiologists to report eletrencephalogram (EEG) findings.  We wrote EWR because there are a lot of commercial EEG recording softwares but some of them don’t have satisfactory report options.  This problem is mostly important in developing countries.  Consequently, EWR can help researches and clinical neurophysiologists to describe their EEG analysis results.  It is built in python 3.10 with use of tkinter and report lab libraries to work in windows 10-11 systems.  EWR is free, light, simple, it generates EEG reports in pdf and it can create as many databanks as needed. Each of those databanks can store many individual EEG reports, classified by patient or record name.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials and Tips:
+
+   00 warning
+   00 What is EEG_Weaver_Reporter
+   00 first_thing
+   01 create first template
+   02 edit created report
+   03 Improving a Report
+   04 signature image
+   05 inserting text
+   06 formatting text
+   07 Add Clinical History (Tab2)
+   08 Other Buttons in  Report List (Tab3)
+   09 Configure (Tab4)
+
+
+Indices
+=======
+
+* :ref:`genindex`
+
+* :ref:`search`

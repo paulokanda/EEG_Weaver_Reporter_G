@@ -1,0 +1,26 @@
+What is EEG_Weaver_Report (EWR) for?
+------------------------------------
+
+It is an app to facilitate a Report Creation.
+Its main pourpose is to create databanks to store reports.
+You can create as  many databanks as needed.
+No more scattered reports!!!
+
+
+.. image:: what_is_EWR.png
+
+EWR is a app tto create a EEG report, print it to pdf and store it in a dababank.
+This report can be reprinted and/or used as a template to be modified to create a new report.
+It is something that I needed and now I'm sharing with you.
+
+I don't need it because I have microsoft Word and Libre office.
+
+Ok. I have both, either. EWR is not a complete, amazing, text  editor.
+On the contrary, we keep things ease, just to format a pdf report to print.
+The main idea is to create databanks to store your reports in one place.
+
+By the way changing some configurations  you can store any type of report.
+
+Try EWR if you wish. I hope you enjoy it as I do.
+
+=================================================
