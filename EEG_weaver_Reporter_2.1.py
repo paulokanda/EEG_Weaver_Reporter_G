@@ -1122,7 +1122,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
     def __init__(self):
         
         super().__init__()
-
+        
         self.bt_text_subscript = None
         self.tkimage4e = None
         self.bt_text_superscript = None
@@ -1306,33 +1306,23 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.make_frames_widgets()
         self.tela()
         self.icon_images()
-        
-        # goes to self.db_path_aba3_cbox ['values'] = Pages.EEG_report_databanks_list:
         now = datetime.now()
         self.determine_date()
         self.get_databk_values_to_cbox()
         self.root_widgets()
         self.make_frames_widgets()
-        # Funcs()
-        # Pages.EEG_report_databanks_list == ''
         self.frame_Sql3_List(self.frame_Tree_aba3)
         self.create_Table()
         self.select_lista()
         self.report_variables()
-        
         self.translate_lang_01()
-        
         self.aba4_translation()
-        
         self.widgets_with_icon()
-        # self.translate_ToolTip()
-        
-        # self.collect_image_footer()
         self.organize_list_arrow()
         root.mainloop()
     
     def tela(self):
-        self.root.title('EEG Weaver Module Report 1.1')
+        self.root.title('EEG Weaver Module Report 2.0')
         # self.root.configure(background='#d1d1d1')
         self.root.configure(background='#708090')
         # self.root.configure(background='#353935')
@@ -1363,11 +1353,6 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         # print('depois',Pages.EEG_report_databanks_list) from treeview
         # print('depois get_databk_values_to_cbox',Pages.EEG_report_databanks_list)
         # ['C:/000_tmp/test.db.db', 'C:/000_tmp/test.db.db', 'C:/000_tmp/test.db.db']
-    
-    # def get_databk_values_to_cbox2(self):
-    #
-    #     self.exit_multiple_sqlite_window()  # close module
-    #     self.multiple_sqlite_window()  # open module
     
     def click_frame(self, event):
         """
@@ -1408,26 +1393,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         
         self.multiple_sqliteWindow.grab_set()  # deny typing in another window
         DatabankGenerator(self.multiple_sqliteWindow)
-        # self.multiple_sqliteWindow.wait_window()  # and wait here until win destroyed
-        # self.make_it_modal()
         
-        # Databank_Generator.create_Table_fidbgen(Databank_Generator)
-        # FuncInDBGen.get_path_name_db_list(FuncInDBGen)
-        # print(Pages.EEG_report_databanks_list)
-        
-        # def multiple_sqlite_window_1(self):
-        #     x = root.winfo_x()
-        #     y = root.winfo_y()
-        #     # self.multiple_sqliteWindow = tk.Toplevel(root)
-        #     self.multiple_sqliteWindow = tk.Toplevel()
-        #     self.multiple_sqliteWindow.geometry('850x600')
-        #     self.multiple_sqliteWindow.geometry("+%d+%d" % (x + -100, y + 200))
-        #     self.multiple_sqliteWindow.resizable(False, False)
-        #     # self.multiple_sqliteWindow.transient(self.root)
-        #     self.multiple_sqliteWindow.focus_force()  # stays in fronmt
-        #
-        #     self.multiple_sqliteWindow.grab_set()  # deny typing in another window
-        #     Databank_Generator(self.multiple_sqliteWindow)
         # -------------------------
     
     def multiple_window_terms_use(self):
@@ -1438,11 +1404,9 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         x = root.winfo_x()  # where this windows appear in screen coordinates
         y = root.winfo_y()  # where this windows appear in screen coordinates
         self.multiple_termsUseWindow = tk.Toplevel()
-        # self.multiple_termsUseWindow = tk.Toplevel()
         self.multiple_termsUseWindow.geometry('850x600')
         self.multiple_termsUseWindow.geometry("+%d+%d" % (x + -100, y + 200))
         self.multiple_termsUseWindow.resizable(False, False)
-        # self.multiple_sqliteWindow.transient(self.root)
         self.multiple_termsUseWindow.focus_force()  # stays in fronmt
         
         self.multiple_termsUseWindow.grab_set()  # deny typing in another window
@@ -1479,14 +1443,6 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.scrool_terms.place(relx=0.965, rely=0.215, relwidth=0.025, relheight=0.7)
         
         # -------------------------
-    
-    # def make_it_modal(self):
-    #     """
-    #     modal mode  .wait_window() very important to stop main gui
-    #     open another one, create and get information, close second window
-    #     and give info back to main gui
-    #     """
-    #     self.multiple_sqliteWindow.wait_window()
     
     def make_it_modal(self, opended_window):
         """
@@ -1662,11 +1618,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.create_tool_tip(self.bt_delete_table, self.text_bt_delete_table)
     
     def translate_lang_01(self):
-        # Funcs.retrieve_portg_or_eng_radiob34_aba4_json()
-        # function to get the value of
-        # self.json_port_eng_radiob34_aba4_var in Funcs
-        # style = ttk.Style()
-        # try:
+        
         if self.json_port_eng_radiob34_aba4_var == 1:
             self.abas.add(self.aba1, text="Edit Report and create PDF")
             self.abas.add(self.aba2, text="Add Clinical History")
@@ -1676,66 +1628,29 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
             self.bt_clear_fields.config(text='Clear Fields')
             self.bt_not_history.config(text='Clear Keep History')
             self.bt_search3.config(text="Search Patient's name:")
-            # self.bt_show_all_aba3.config(text="Show all Reports")
             self.bt_delete_logo_aba3.config(text="Delete Logo")
             self.bt_delete_signature_aba3.config(text="Delete Signature")
             self.bt_add_record.config(text='Save New')
-            # self.bt_add_record3.config(text='Save New')
             self.bt_save_update_aba2.config(text='Save Update')
-            # self.bt_save_update3.config(text='Save Update')
             self.bt_duplicate3.config(text='Duplicate Report')
             self.bt_delete_1.config(text='Delete This Report')
-            # self.bt_delete_3.config(text='Delete One Selected')
-            # self.bt_delete_many3.config(text='Delete Many')
-            # self.bt_delete_all3.config(text='Delete All')
             self.bt_get_logo_aba1.config(text='Get Logo')
             self.bt_get_logo_aba3.config(text='Get Logo')
             self.bt_get_signature_aba1.config(text='Get Signature')
             self.bt_get_signature_aba3.config(text='Get Signature')
-            self.bt_Report3.config(text='Report to PDF')
-            # self.bt_Report.config(text='Report to PDF')
-            # self.patient_label.config(text='Patient:')
+            self.bt_Report3.config(text='DataBank')
             self.gender_label.config(text='Gender:')
-            # self.radiobutton1.config(text="Letter")
-            # self.sex_chosen = ["Male", "Female"]
             self.age_label.config(text='Age:')
             self.diag_label.config(text='Diagnosis:')
             self.srate_label.config(text='Sampling Rate:')
             self.report_Date_label.config(text='Report Date:')
-            # self.lframe1_aba4.config(text="Page size")
-            # self.lframe2_aba4.config(text='Switch Language')
-            # self.lframe3_aba4.config(text='Show PDF after creation?')
-            # self.radiobutton5.config(text="Show PDF File")
-            # self.radiobutton6.config(text="Don't Show PDF.")
             self.bt_delete_history.config(text='Delete History Only')
-            # self.bt_save_update.config(text='Save Text')
-            # self.bt_Report.config(text='Clinical History to PDF')
             self.lb_header.config(text='HEADER')
             self.lb_body.config(text='EEG..REPORT.. BODY')
             self.lb_footer.config(text="DOCTOR")
             self.lb_txt_history1.config(text="END")
             self.lb_history.config(text='PATIENT..HISTORY')
             
-            # self.listaCli.heading("#0", text="")  # do not have a column associated
-            # self.listaCli.heading("#1", text="Id")
-            # self.listaCli.heading("#2", text="Patient")
-            # self.listaCli.heading("#3", text="Gender")
-            # self.listaCli.heading("#4", text="Age")
-            # self.listaCli.heading("#5", text="Diagnosis")
-            # self.listaCli.heading("#6", text="LFF")
-            # self.listaCli.heading("#7", text="HFF")
-            # self.listaCli.heading("#8", text="SRate")
-            # self.listaCli.heading("#9", text="RecDate")
-            # self.listaCli.heading("#10", text="Header")
-            # self.listaCli.heading("#11", text="Report")
-            # self.listaCli.heading("#12", text="Doctor")
-            # self.listaCli.heading("#13", text="Logo")
-            # self.listaCli.heading("#14", text="Sign")
-            # self.listaCli.heading("#15", text="End")
-            # self.listaCli.heading("#16", text="History")
-            #
-            #
-        
         elif self.json_port_eng_radiob34_aba4_var == 2:
             self.abas.add(self.aba1, text="Edite o Laudo e Crie o PDF")
             self.abas.add(self.aba2, text="História Clínica")
@@ -1749,14 +1664,14 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
             self.lb_history.config(text='PACIENTE..HISTÓRIA')
             
             self.bt_add_record.config(text='Salve Novo')  # aba1
-            self.bt_save_update_aba1.config(text='Salve Atualize')
-            self.bt_save_update_aba2.config(text='Salve Atualize')
-            self.bt_delete_1.config(text='Apagar este  Laudo')
-            self.bt_get_logo_aba1.config(text='Pegar Logo')
-            self.bt_get_logo_aba3.config(text='Pegar Logo')
-            self.bt_get_signature_aba1.config(text='Pegar Assinatura')
-            self.bt_get_signature_aba3.config(text='Pegar Assinatura')
-            self.bt_Report_aba1.config(text='Gerar PDF')
+            self.bt_save_update_aba1.config(text='Regravar')
+            self.bt_save_update_aba2.config(text='Regravar')
+            self.bt_delete_1.config(text='Apagar Laudo')
+            self.bt_get_logo_aba1.config(text='Cria Logo')
+            self.bt_get_logo_aba3.config(text='Cria Logo')
+            self.bt_get_signature_aba1.config(text='Assinar')
+            self.bt_get_signature_aba3.config(text='Assinar')
+            # self.bt_Report_aba1.config(text='Gerar PDF')
             self.patient_label_aba1.config(text='Paciente:')
             self.gender_label.config(text='Gênero:')
             self.age_label.config(text='Idade:')
@@ -1771,84 +1686,10 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
             # self.bt_add_record3.config(text='Salve Novo')
             # self.bt_save_update3.config(text='Gravar mudança')
             self.bt_duplicate3.config(text='Duplicar Laudo')
-            # self.bt_delete_1.config(text='Apagar este  Laudo')
-            # self.bt_delete_3.config(text='Apagar Um Selecionado')
-            # self.bt_delete_many3.config(text='Apagar Vários')
-            self.bt_delete_all3.config(text='Apagar Todos')
-            # self.bt_get_logo_aba1.config(text='Pegar Logo')
-            # self.bt_get_logo_aba3.config(text='Pegar Logo')
-            # self.bt_get_signature_aba1.config(text='Pegar Assinatura')
-            # self.bt_get_signature_aba3.config(text='Pegar Assinatura')
-            self.bt_Report3.config(text='Gerar PDF')
-            # self.bt_Report.config(text='Gerar PDF')
             
-            # self.sex_chosen = ["Homem", "Mulher"]
-            # self.text_l1Cvas2aba4.set("Configure Opções e PDF.")
-            
-            # self.lframe1_aba4.config(text="Tamanho de Página")
-            # self.lframe2_aba4.config(text="Mudar Idioma")
-            # self.lframe3_aba4.config(text='Mostrar PDF após criado?')
-            # self.radiobutton5.config(text='Mostrar PDF?')
-            # self.radiobutton6.config(text="Não, depois vejo.")
-            self.bt_delete_history.config(text='Apagar Apenas História')
-            # self.bt_save_update.config(text='Salve Texto')
+            self.bt_Report3.config(text='DataBancos')
+            self.bt_delete_history.config(text='Apagar só História')
             self.bt_Report_aba2.config(text='História Clínica cria PDF')
-            # self.radiobutton1.config(text="Carta")
-            
-            # self.listaCli.heading("#0", text="")  # do not have a column associated
-            # self.listaCli.heading("#1", text="Id")
-            # self.listaCli.heading("#2", text="Paciente")
-            # self.listaCli.heading("#3", text="Sexo")
-            # self.listaCli.heading("#4", text="Idade")
-            # self.listaCli.heading("#5", text="Diagnóstico")
-            # self.listaCli.heading("#6", text="LFF")
-            # self.listaCli.heading("#7", text="HFF")
-            # self.listaCli.heading("#8", text="txAmst")
-            # self.listaCli.heading("#9", text="Data")
-            # self.listaCli.heading("#10", text="Cabeçalho")
-            # self.listaCli.heading("#11", text="Laudo")
-            # self.listaCli.heading("#12", text="Doutor")
-            # self.listaCli.heading("#13", text="Logo")
-            # self.listaCli.heading("#14", text="Assin")
-            # self.listaCli.heading("#15", text="Fim")
-            # self.listaCli.heading("#16", text="História")
-        
-        # except Exception:
-        #     return
-    
-    # def lista_cli_translate(self):
-    #     current_db = (resource_path("current_db_used.json"))
-    #
-    #     if self.json_port_eng_radiob34_aba4_var == 1:
-    #
-    #         ALTER TABLE current_db RENAME COLUMN "Paciente" TO "Patient";
-    #         ALTER TABLE current_db RENAME COLUMN "Sexo" TO "Gender";
-    #         ALTER TABLE current_db RENAME COLUMN "Idade" TO "Age";
-    #         ALTER TABLE current_db RENAME COLUMN "Diagnóstico" TO "Diagnosis";
-    #         ALTER TABLE current_db RENAME COLUMN "txAmst" TO "txAmst";
-    #         ALTER TABLE current_db RENAME COLUMN "Data" TO "RecDate";
-    #         ALTER TABLE current_db RENAME COLUMN "Cabeçalho" TO "Header";
-    #         ALTER TABLE current_db RENAME COLUMN "Laudo" TO "Report";
-    #         ALTER TABLE current_db RENAME COLUMN "Doutor" TO "Doctor";
-    #         ALTER TABLE current_db RENAME COLUMN "Assin" TO "Sign";
-    #         ALTER TABLE current_db RENAME COLUMN "Fim" TO "End";
-    #         ALTER TABLE current_db RENAME COLUMN "História" TO "History";
-    #
-    #     elif self.json_port_eng_radiob34_aba4_var == 2:
-    #         ALTER TABLE current_db RENAME COLUMN "Paciente" TO "Patient";
-    #         ALTER TABLE current_db RENAME COLUMN "Sexo" TO "Gender";
-    #         ALTER TABLE current_db RENAME COLUMN "Idade" TO "Age";
-    #         ALTER TABLE current_db RENAME COLUMN "Diagnóstico" TO "Diagnosis";
-    #         ALTER TABLE current_db RENAME COLUMN "txAmst" TO "txAmst";
-    #         ALTER TABLE current_db RENAME COLUMN "Data" TO "RecDate";
-    #         ALTER TABLE current_db RENAME COLUMN "Cabeçalho" TO "Header";
-    #         ALTER TABLE current_db RENAME COLUMN "Laudo" TO "Report";
-    #         ALTER TABLE current_db RENAME COLUMN "Doutor" TO "Doctor";
-    #         ALTER TABLE current_db RENAME COLUMN "Assin" TO "Sign";
-    #         ALTER TABLE current_db RENAME COLUMN "Fim" TO "End";
-    #         ALTER TABLE current_db RENAME COLUMN "História" TO "History";
-    #
-    #
     
     def collect_image_logo(self):
         """
@@ -2104,7 +1945,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
             self.tkimage10 = PhotoImage(file=resource_path("drop_table.png"))
             self.bt_delete_table = tk.Button(self.aba3, image=self.tkimage10, compound=tk.LEFT, bd=0,
                                              bg='#A9A9A9', activebackground='#A9A9A9', command=self.drop_table_all)
-            self.bt_delete_table.place(relx=0.65, rely=0.0127, relwidth=0.0237, relheight=0.043)
+            self.bt_delete_table.place(relx=0.506, rely=0.0127, relwidth=0.0237, relheight=0.043)
             self.bt_delete_table.image = self.tkimage10  # reference to image not garbage collect
             
             self.text_bt_delete_table = "Delete All Reports"  # 'Drop Table'     #delete table =same as delete report
@@ -2343,20 +2184,20 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         
         self.bt_add_record = ttk.Button(self.aba1, text='Save New', style='Bold.TButton',
                                         command=self.save_report)
-        self.bt_add_record.place(relx=0.345, rely=0.01, relwidth=0.07, relheight=0.04)
+        self.bt_add_record.place(relx=0.345, rely=0.01, relwidth=0.068, relheight=0.04)
         # self.bt_add_record3  = ttk.Button(self.aba3, text='Save New', style= 'Bold.TButton',
         #                            command = self.save_report)
         # self.bt_add_record3.place(relx=0.105, rely=0.01, relwidth=0.07, relheight=0.04)
         
-        self.bt_save_update_aba1 = ttk.Button(self.aba1, text='Save Update', style='Bold.TButton',
+        self.bt_save_update_aba1 = ttk.Button(self.aba1, text='Resave', style='Bold.TButton',
                                               command=self.update_report)
-        self.bt_save_update_aba1.place(relx=0.417, rely=0.01, relwidth=0.09, relheight=0.04)
+        self.bt_save_update_aba1.place(relx=0.416, rely=0.01, relwidth=0.07, relheight=0.04)
         
         # ------delete report
         
         self.bt_delete_1 = ttk.Button(self.aba1, text='Delete This Report', style='Bold.TButton',
                                       command=self.delete_report)
-        self.bt_delete_1.place(relx=0.51, rely=0.01, relwidth=0.12, relheight=0.04)
+        self.bt_delete_1.place(relx=0.49, rely=0.01, relwidth=0.105, relheight=0.04)
         
         # self.bt_delete_3  = ttk.Button(self.aba3, text='Delete One Selected', style= 'Bold.TButton',
         #                                command = self.delete_report)
@@ -2367,7 +2208,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.bt_ascending3 = tk.Button(self.aba3, image=self.tkimage1, compound=tk.LEFT, bd=0,
                                        bg='#A9A9A9', activebackground='#A9A9A9', command=self.ascending)
         self.bt_ascending3.image = self.tkimage1  # reference to image not garbage collect
-        self.bt_ascending3.place(relx=0.71, rely=0.015, relwidth=0.017, relheight=0.035)
+        self.bt_ascending3.place(relx=0.545, rely=0.015, relwidth=0.017, relheight=0.035)
         
         text_bt_ascending3 = 'List Ascending'
         self.create_tool_tip(self.bt_ascending3, text_bt_ascending3)
@@ -2376,21 +2217,21 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.bt_movedown3 = tk.Button(self.aba3, image=self.tkimage2, compound=tk.LEFT, bd=0,
                                       bg='#A9A9A9', activebackground='#A9A9A9', command=self.descending)
         self.bt_movedown3.image = self.tkimage2
-        self.bt_movedown3.place(relx=0.74, rely=0.015, relwidth=0.017, relheight=0.035)
+        self.bt_movedown3.place(relx=0.57, rely=0.015, relwidth=0.017, relheight=0.035)
         text_bt_movedown3 = 'List Descending'
         self.create_tool_tip(self.bt_movedown3, text_bt_movedown3)
         # ------------------------------
         
         self.bt_get_logo_aba1 = ttk.Button(self.aba1, text='Get Logo', style='Bold.TButton',
                                            command=self.collect_image_logo)
-        self.bt_get_logo_aba1.place(relx=0.634, rely=0.01, relwidth=0.06, relheight=0.04)
+        self.bt_get_logo_aba1.place(relx=0.61, rely=0.01, relwidth=0.06, relheight=0.04)
         self.bt_get_logo_aba3 = ttk.Button(self.aba3, text='Get Logo', style='Bold.TButton',
                                            command=self.collect_image_logo)
         self.bt_get_logo_aba3.place(relx=0.32, rely=0.065, relwidth=0.09, relheight=0.04)
         
         self.bt_get_signature_aba1 = ttk.Button(self.aba1, text='Get Signature', style='Bold.TButton',
                                                 command=self.collect_image_footer)
-        self.bt_get_signature_aba1.place(relx=0.71, rely=0.01, relwidth=0.09, relheight=0.04)
+        self.bt_get_signature_aba1.place(relx=0.68, rely=0.01, relwidth=0.09, relheight=0.04)
         self.bt_get_signature_aba3 = ttk.Button(self.aba3, text='Get Signature', style='Bold.TButton',
                                                 command=self.collect_image_footer)
         self.bt_get_signature_aba3.place(relx=0.41, rely=0.065, relwidth=0.1, relheight=0.04)
@@ -2399,7 +2240,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         
         self.bt_Report3 = ttk.Button(self.aba3, text='Data Bases', style='Bold.TButton',
                                      command=self.multiple_sqlite_window_modal)
-        self.bt_Report3.place(relx=0.80, rely=0.01, relwidth=0.1, relheight=0.04)
+        self.bt_Report3.place(relx=0.60, rely=0.01, relwidth=0.1, relheight=0.04)
         
         # self.label = tk.Label(self.aba3)
         # self.label.place(relx=0.7, rely=0.01, relwidth=0.10, relheight=0.04)
@@ -2459,7 +2300,7 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.db_path_aba3_cbox.set(self.current_db)
         
         # ----------------------------change font---------------------start aba1
-        
+        # insert html tags to change font style in Text widgets.
         all_commands_bold = lambda: [self.take_text_from_report(self.txt_header, "b>"),
                                      self.take_text_from_report(self.txt_body, "b>"),
                                      self.take_text_from_report(self.txt_footer, "b>"),
