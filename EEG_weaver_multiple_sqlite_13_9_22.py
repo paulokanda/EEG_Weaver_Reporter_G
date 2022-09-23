@@ -700,7 +700,7 @@ class DatabankGenerator(FuncInDBGen, Funcs):
             # initialdir="C:/",
             mode="w",
             defaultextension=".db",
-            filetypes=(("DB", "*.db"), ("All files", "*"))
+            filetypes=(("DB", "*.db"), ("DB", "*.db"))  # ("All files", "*"))
         )
         
         #     <_io.TextIOWrapper...
@@ -882,7 +882,10 @@ class DatabankGenerator(FuncInDBGen, Funcs):
         
         """
         
-        database_to_import = tk.filedialog.askopenfile()
+        database_to_import = tk.filedialog.askopenfile(
+            title='select', filetypes=[
+                ("DB", "*.db"),])
+        # (("DB", "*.db"), ("DB", "*.db")
         if database_to_import:
             print(database_to_import.name)
         

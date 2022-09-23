@@ -182,8 +182,11 @@ class Funcs:
     def connect_db(self):
         
         # self.disconnect_db()
-        self.conn = sqlite3.connect(Pages.current_main_db_in_use)  # databank name
-        self.cursor = self.conn.cursor()
+        try:
+            self.conn = sqlite3.connect(Pages.current_main_db_in_use)  # databank name
+            self.cursor = self.conn.cursor()
+        except sqlite3.OperationalError:
+            return
     
     def disconnect_db(self):
         self.conn.close()
@@ -192,24 +195,27 @@ class Funcs:
         db_new_name = Pages.current_main_db_in_use
         self.connect_db()
         # criar tabela  cliente é tabela dentro do banco clientes.db
-        self.cursor.execute("""
-            CREATE TABLE IF NOT EXISTS clientes (id INTEGER PRIMARY KEY,
-                patient_name CHAR NOT NULL,
-                gender CHAR,
-                age CHAR,
-                diagnosis CHAR,
-                lff FLOAT,
-                hff FLOAT,
-                sampling_rate INTEGER,
-                recdate DATE,
-                header  CHAR,
-                body  CHAR,
-                footer  CHAR,
-                signature_image_db_logo CHAR,
-                signature_image_db CHAR,
-                patient_history1 CHAR,
-                patient_history CHAR)
-        """)
+        try:
+            self.cursor.execute("""
+                CREATE TABLE IF NOT EXISTS clientes (id INTEGER PRIMARY KEY,
+                    patient_name CHAR NOT NULL,
+                    gender CHAR,
+                    age CHAR,
+                    diagnosis CHAR,
+                    lff FLOAT,
+                    hff FLOAT,
+                    sampling_rate INTEGER,
+                    recdate DATE,
+                    header  CHAR,
+                    body  CHAR,
+                    footer  CHAR,
+                    signature_image_db_logo CHAR,
+                    signature_image_db CHAR,
+                    patient_history1 CHAR,
+                    patient_history CHAR)
+            """)
+        except AttributeError:
+            return
         self.conn.commit()
         self.disconnect_db()
     
@@ -353,23 +359,26 @@ class Funcs:
         """
         self.listaCli.delete(*self.listaCli.get_children())
         self.connect_db()
-        lista = self.cursor.execute(""" SELECT id,
-                                    patient_name,
-                                    gender,
-                                    age,
-                                    diagnosis,
-                                    lff,
-                                    hff,
-                                    sampling_rate,
-                                    recdate,
-                                    header,
-                                    body,
-                                    footer,
-                                    signature_image_db_logo,
-                                    signature_image_db,
-                                    patient_history1,
-                                    patient_history
-                                    FROM clientes ORDER BY patient_name ASC; """)
+        try:
+            lista = self.cursor.execute(""" SELECT id,
+                                        patient_name,
+                                        gender,
+                                        age,
+                                        diagnosis,
+                                        lff,
+                                        hff,
+                                        sampling_rate,
+                                        recdate,
+                                        header,
+                                        body,
+                                        footer,
+                                        signature_image_db_logo,
+                                        signature_image_db,
+                                        patient_history1,
+                                        patient_history
+                                        FROM clientes ORDER BY patient_name ASC; """)
+        except AttributeError:
+            return
         # ASC  calls client in ascendent order    DESC is the contrary
         
         self.listaCli.tag_configure('oddrow', background='#ebf5fb')
@@ -718,7 +727,10 @@ class Funcs:
         
         self.listaCli.delete(*self.listaCli.get_children())
         
-        self.cursor.execute("SELECT * FROM clientes ORDER BY `id` ASC")
+        try:
+            self.cursor.execute("SELECT * FROM clientes ORDER BY `id` ASC")
+        except AttributeError:
+            return
         
         fetch = self.cursor.fetchall()
         # print(fetch)
@@ -907,6 +919,7 @@ class Funcs:
         self.get_databk_values_to_cbox()
         # with open(r"/json_objects/current_db_used.json") as file_object_db:
         # with open("current_db_used.json") as file_object_db:
+        
         with open(resource_path("current_db_used.json")) as file_object_db:
             self.current_db = json.load(file_object_db)
             Pages.current_main_db_in_use = self.current_db
