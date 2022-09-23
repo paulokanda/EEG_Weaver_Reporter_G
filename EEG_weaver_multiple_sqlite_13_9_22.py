@@ -665,6 +665,7 @@ class DatabankGenerator(FuncInDBGen, Funcs):
     def remove_one(self):  # innerdatabase
         x = self.tree_db.selection()[0]
         self.tree_db.delete(x)
+
     
     def add_record(self, db_new_name, db_date, db_path, db_file_size):  # inner database
         

@@ -527,6 +527,7 @@ class Funcs:
             
             advise_label_variable = 'Report Deleted'
             self.I_did_it(advise_label_variable)
+            self.report_Date_entry.insert(END, self.report_date)  #  restore entry date after del
         else:
             pass
     
@@ -564,6 +565,7 @@ class Funcs:
             self.cursor.close()
             self.disconnect_db()
             self.clear_screen_funcs()
+            self.report_Date_entry.insert(END, self.report_date)  #  restore entry date after del
     
     def drop_table_all(self):
         
@@ -594,7 +596,9 @@ class Funcs:
         
         advise_label_variable = 'Table Destroyed'
         self.I_did_it(advise_label_variable)
-    
+
+        self.report_Date_entry.insert(END, self.report_date)  # restore entry date after del
+
     def update_report(self):  # button save update
         self.report_variables()
         self.connect_db()

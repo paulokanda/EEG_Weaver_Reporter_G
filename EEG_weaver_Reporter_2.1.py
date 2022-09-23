@@ -1913,11 +1913,6 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
             self.text_bt_del_this_one = 'Delete Report Selected'  # delete table =same as delete report
             self.create_tool_tip(self.bt_del_this_one, self.text_bt_del_this_one)
             
-            # self.bt_delete_3  = ttk.Button(self.aba3, text='Delete One Selected', style= 'Bold.TButton',
-            #                                command = self.delete_report)
-            # self.bt_delete_3.place(relx=0.357, rely=0.01, relwidth=0.14, relheight=0.04)
-            # ----------------------------------------------------
-            #     self.tkimage13 = PhotoImage(file=r"G:\PycharmProjects\EEG_WEAVER\images\delete_many.png")
             self.tkimage13 = PhotoImage(file=resource_path("delete_many.png"))
             self.bt_del_many = tk.Button(self.aba3, image=self.tkimage13, compound=tk.LEFT, bd=0,
                                          bg='#A9A9A9', activebackground='#A9A9A9', command=self.delete_many)
@@ -2198,10 +2193,6 @@ class Application(FuncInDBGen, EegPdfReport, Funcs, ToolTip):  # Funcs to applic
         self.bt_delete_1 = ttk.Button(self.aba1, text='Delete This Report', style='Bold.TButton',
                                       command=self.delete_report)
         self.bt_delete_1.place(relx=0.49, rely=0.01, relwidth=0.105, relheight=0.04)
-        
-        # self.bt_delete_3  = ttk.Button(self.aba3, text='Delete One Selected', style= 'Bold.TButton',
-        #                                command = self.delete_report)
-        # self.bt_delete_3.place(relx=0.357, rely=0.01, relwidth=0.14, relheight=0.04)
         
         # ------------------------------buttons up down
         
