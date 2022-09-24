@@ -55,21 +55,121 @@ Conclusion:
 In developing countries many local companies digitally record and process EEG, unfortunately, some of their solutions to report EEG are very limited. EEG Weaver Reporter is a free and compact python solution to write reports keeping them in databanks for ease review and restoration.
 
  
-Kanda RG, Cury IJ, Lovatel ATB, Kanda PAM 2014. Sugestões práticas para a descrição do EEG de rotina. Revista Neurociências, 22(3), 464-468.
-
+1.	Kanda RG, Cury IJ, Lovatel ATB, Kanda PAM 2014. Sugestões práticas para a descrição do EEG de rotina. Revista Neurociências, 22(3), 464-468.
 2.	Gramfort A, Luessi M, Larson E, et al. MNE software for processing MEG and EEG data. 2014;86:446-460.
-3.	Documentation S. Limits In SQLite [online]. Available at: https://www.sqlite.org/limits.html.
+3.	KREIBICH, Jay. Using SQLite. " O'Reilly Media, Inc.", 2010.
 4.	Bienz T, Cohn R, Systems A. Portable document format reference manual: Citeseer, 1993.
 5.	Inden M. Short Introduction to Python 3.10.  Python Challenges: 100 Proven Programming Tasks Designed to Prepare You for Anything. Berkeley, CA: Apress, 2022: 635-643.
 6.	Peterson BJPI. Python Insider: Python 2.7. 18, the last release of Python 2. 2020.
-7.	The Python Language Reference. Python Software Foundation. Archived from the original on 15 December 2018. Retrieved 14 june 2022. [online]. Available at: https://docs.python.org/3.0/reference/datamodel.html#special-method-names.
+7.	VAN ROSSUM, Guido; DRAKE JR, Fred L. The python language reference. Python software foundation, 2014.
 8.	Grayson JE. Python and Tkinter programming: Manning Publications Co. Greenwich, 2000.
-9.	2022.1 JP. Choose the best PyCharm for you. [online]. Available at: https://www.jetbrains.com/help/pycharm/quick-start-guide.html.
+9.	ISLAM, Quazi Nafiul. Mastering PyCharm. Packt Publishing Ltd, 2015.
 10.	Meier B. Python GUI Programming Cookbook: Develop functional and responsive user interfaces with tkinter and PyQt5: Packt Publishing Ltd, 2019.
 11.	Summerfield M. Python in practice: create better programs using concurrency, libraries, and patterns: Addison-Wesley, 2013.
 12.	Roseman M. Modern Tkinter for Busy Python Developers: Quickly Learn to Create Great Looking User Interfaces for Windows, Mac and Linux Using Python's Standard GUI Toolkit: Late Afternoon Press, 2020.
 13.	Elder J. Create Graphical User Interfaces With Python And TKinter. Codemy.com [online]. Available at: https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw.
 14.	Serafim R. Tkinter course.RfZorzi [online]. Available at: https://www.youtube.com/watch?v=RtrZcoVD1WM&t=41s.
+
+
+@article{kanda2014sugestoes,
+  title={Sugest{\~o}es pr{\'a}ticas para a descri{\c{c}}{\~a}o do EEG de rotina},
+  author={Kanda, Raquel Guimar{\~a}es and Cury, Ivan Jos{\'e} and Lovatel, Arnaldo Thiago Berto and Kanda, Paulo Afonso Medeiros},
+  journal={Revista Neuroci{\^e}ncias},
+  volume={22},
+  number={3},
+  pages={464--468},
+  year={2014}
+}
+
+@article{gramfort2014mne,
+  title={MNE software for processing MEG and EEG data},
+  author={Gramfort, Alexandre and Luessi, Martin and Larson, Eric and Engemann, Denis A and Strohmeier, Daniel and Brodbeck, Christian and Parkkonen, Lauri and H{\"a}m{\"a}l{\"a}inen, Matti S},
+  journal={Neuroimage},
+  volume={86},
+  pages={446--460},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@book{kreibich2010using,
+  title={Using SQLite},
+  author={Kreibich, Jay},
+  year={2010},
+  publisher={" O'Reilly Media, Inc."}
+}
+
+@book{bienz1993portable,
+  title={Portable document format reference manual},
+  author={Bienz, Tim and Cohn, Richard and Adobe Systems (Mountain View, Calif.)},
+  year={1993},
+  publisher={Citeseer}
+}
+
+@incollection{inden2022short,
+  title={Short Introduction to Python 3.10},
+  author={Inden, Michael},
+  booktitle={Python Challenges},
+  pages={635--643},
+  year={2022},
+  publisher={Springer}
+}
+
+@article{peterson2020python,
+  title={Python Insider: Python 2.7. 18, the last release of Python 2},
+  author={Peterson, Benjamin},
+  journal={Python Insider},
+  year={2020}
+}
+
+@article{van2014python,
+  title={The python language reference},
+  author={Van Rossum, Guido and Drake Jr, Fred L},
+  journal={Python software foundation},
+  year={2014}
+}
+
+@book{grayson2000python,
+  title={Python and Tkinter programming},
+  author={Grayson, John E},
+  year={2000},
+  publisher={Manning Publications Co. Greenwich}
+}
+
+@book{islam2015mastering,
+  title={Mastering PyCharm},
+  author={Islam, Quazi Nafiul},
+  year={2015},
+  publisher={Packt Publishing Ltd}
+}
+
+@book{meier2019python,
+  title={Python GUI Programming Cookbook: Develop functional and responsive user interfaces with tkinter and PyQt5},
+  author={Meier, Burkhard},
+  year={2019},
+  publisher={Packt Publishing Ltd}
+}
+
+@book{summerfield2013python,
+  title={Python in practice: create better programs using concurrency, libraries, and patterns},
+  author={Summerfield, Mark},
+  year={2013},
+  publisher={Addison-Wesley}
+}
+
+@book{roseman2020modern,
+  title={Modern Tkinter for Busy Python Developers: Quickly Learn to Create Great Looking User Interfaces for Windows, Mac and Linux Using Python's Standard GUI Toolkit},
+  author={Roseman, Mark},
+  year={2020},
+  publisher={Late Afternoon Press}
+}
+
+@book{roseman2020modern,
+  title={Modern Tkinter for Busy Python Developers: Quickly Learn to Create Great Looking User Interfaces for Windows, Mac and Linux Using Python's Standard GUI Toolkit},
+  author={Roseman, Mark},
+  year={2020},
+  publisher={Late Afternoon Press}
+}
+
 
 
 LEGEND OF FIGURES
