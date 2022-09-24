@@ -4,4 +4,4 @@
  
 After downloading and installing EEGWR_setup.exe you have a help file in main window of app.
 Watch Video tutorial
-[<img src="https://drive.google.com/file/d/1kYts4SgeM8-RnZAyH7DP2puQHdJXHpMz/view?usp=sharing" width="50%">](https://drive.google.com/file/d/1mPwuf3SmtbnbzyQVa_Mfyd_6_GgGtV-x/view?usp=sharing)
+[<img src="https://github.com/paulokanda/EEG_Weaver_Reporter_G/13tab1.png?raw=true)" width="50%">](https://drive.google.com/file/d/1mPwuf3SmtbnbzyQVa_Mfyd_6_GgGtV-x/view?usp=sharing)
