@@ -44,6 +44,7 @@ class Funcs:
     
     def __init__(self):
         # self.listaCli_Dic = None
+        self.report_date = None
         self.reportlab_fonts_to_use = None
         self.my_specific_font = None
         self.retrieved_radiob1_cbox_aba4_json = None
@@ -527,7 +528,8 @@ class Funcs:
             
             advise_label_variable = 'Report Deleted'
             self.I_did_it(advise_label_variable)
-            self.report_Date_entry.insert(END, self.report_date)  #  restore entry date after del
+            self.report_Date_entry.insert(END, self.report_date)
+            # restore entry date after del
         else:
             pass
     
@@ -565,7 +567,8 @@ class Funcs:
             self.cursor.close()
             self.disconnect_db()
             self.clear_screen_funcs()
-            self.report_Date_entry.insert(END, self.report_date)  #  restore entry date after del
+            self.report_Date_entry.insert(END, self.report_date)
+            # restore entry date after del
     
     def drop_table_all(self):
         
@@ -940,12 +943,13 @@ class Funcs:
             self.updated_list_with_newdb = json.load(file_object_db)
             Pages.updated_list_with_newdb = self.updated_list_with_newdb
         return self.updated_list_with_newdb
-    
+
     def on_select_db_path_aba3_cbox(self):
         """
         this method and 'def store_db_to_json' are used together in bind_db_path_aba3_cbox
         in combobox
         """
+
         Pages.current_main_db_in_use = self.db_path_aba3_cbox.get()
     
     def bind_db_path_aba3_cbox(self, event):
@@ -956,6 +960,11 @@ class Funcs:
         updates treeview
         """
         self.store_db_to_json()
+        
+        # cleans all fields when new databank is called:
+        self.clear_screen_funcs()
+        
+        #select new databank in aba3:
         self.on_select_db_path_aba3_cbox()
         self.select_lista()
     
